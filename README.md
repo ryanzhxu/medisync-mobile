@@ -18,8 +18,6 @@ OR
 npm run ios
 ```
 
-Alternatively, you can also run **npm start** and then enter 'a' for Android or 'i' for iOS to launch the app on your emulator. 
-
 To view with your own mobile device, you must have the **Expo Go** app installed from either the iOS or Google Play Store. Then run: 
 ```sh
 npm install
