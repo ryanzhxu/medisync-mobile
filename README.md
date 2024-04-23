@@ -1,13 +1,22 @@
-# Expo Router Example
+# Medisync Mobile App
 
-Use [`expo-router`](https://docs.expo.dev/router/introduction/) to build native navigation using files in the `app/` directory.
+Project created for the Pangea Securathon Showdown. 
 
-## 🚀 How to use
+##  How to run
 
+To view on a web browser:
 ```sh
-npx create-expo-app -e with-router
+npm install
+npm start
 ```
+Then, navigate to http://localhost:8081/. 
 
-## 📝 Notes
+To view using the your mobile device, you must have the **Expo Go** app installed from either the iOS or Google Play Store. Then run: 
+```sh
+npm install
+expo-cli start --tunnel
+```
+Scan the QR code that prints out on the terminal to view it on your phone. 
 
-- [Expo Router: Docs](https://docs.expo.dev/router/introduction/)
+## Contributors 
+
