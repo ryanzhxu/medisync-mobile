@@ -4,15 +4,17 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     alignItems: "center",
-    marginTop: "50%",
+    marginTop: "60%",
   },
   logo: {
     width: "80%",
-    marginBottom: "40px",
+    resizeMode: "contain",
+    marginBottom: "7%",
   },
   logoText: {
+    paddingTop: "40",
     color: "#777E89",
-    fontSize: "14pt",
+    fontSize: 18,
     fontFamily: "Roboto",
   },
 });
