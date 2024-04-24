@@ -15,7 +15,7 @@ const styles = StyleSheet.create({
     width: "80%",
     marginBottom: "7%",
   },
-  logoText: {
+  subText: {
     width: "70%",
     paddingTop: "40",
     color: colors.grey,
