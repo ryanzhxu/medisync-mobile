@@ -11,7 +11,28 @@ const styles = StyleSheet.create({
     marginTop: "10%",
     padding: 30,
   },
-  nextButton: {
+  dateInput: {
+    color: colors.grey,
+    backgroundColor: colors.lightGrey,
+    borderColor: colors.blue,
+    paddingHorizontal: 12,
+    paddingVertical: 13,
+    borderRadius: 10,
+    marginBottom: 12,
+  },
+  dateTimePicker: {
+    height: 120,
+    marginTop: -10,
+  },
+  pickerButton: {
+    paddingHorizontal: 20,
+  },
+  buttonText: {
+    fontSize: 14,
+    fontWeight: "500",
+    color: "#fff",
+  },
+  signUpButton: {
     width: "100%",
     marginBottom: "4%",
   },
@@ -22,6 +43,10 @@ const styles = StyleSheet.create({
   footerLink: {
     color: colors.blue,
     fontFamily: "RobotoBold",
+  },
+  label: {
+    color: colors.grey,
+    marginBottom: 12,
   },
 });
 

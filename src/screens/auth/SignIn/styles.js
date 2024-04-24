@@ -8,12 +8,12 @@ const styles = StyleSheet.create({
   content: {
     flex: 1,
     paddingHorizontal: "30px",
-    marginTop: "40%",
+    marginTop: "30%",
     padding: 30,
   },
   signInButton: {
     width: "100%",
-    marginBottom: "12",
+    marginBottom: "4%",
   },
   footerText: {
     color: colors.grey,

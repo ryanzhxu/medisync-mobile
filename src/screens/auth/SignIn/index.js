@@ -17,7 +17,10 @@ const SignIn = ({ navigation }) => {
         <Input placeholder="Enter your email" label="Email Address" />
         <Input placeholder="********" label="Password" secureTextEntry />
         <Button style={styles.signInButton}>Sign In</Button>
-        <Text style={styles.footerText}>
+        <Text
+          onPress={() => navigation.navigate("SignUp")}
+          style={styles.footerText}
+        >
           Not registered? <Text style={styles.footerLink}>Sign up!</Text>
         </Text>
       </View>
