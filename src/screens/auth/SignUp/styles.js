@@ -1,4 +1,4 @@
-import { StyleSheet, StatusBar } from "react-native";
+import { StyleSheet } from "react-native";
 import colors from "../../../constants/colors";
 
 const styles = StyleSheet.create({
@@ -7,7 +7,6 @@ const styles = StyleSheet.create({
   },
   content: {
     flex: 1,
-    paddingHorizontal: "30px",
     padding: 30,
   },
   nextButton: {

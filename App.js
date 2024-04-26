@@ -2,14 +2,8 @@ import { useCallback } from "react";
 import { useFonts } from "expo-font";
 import * as SplashScreen from "expo-splash-screen";
 import { NavigationContainer, DefaultTheme } from "@react-navigation/native";
-import { createStackNavigator } from "@react-navigation/stack";
 import "react-native-gesture-handler";
-import Landing from "./src/screens/auth/Landing";
-import SignIn from "./src/screens/auth/SignIn";
-import SignUp from "./src/screens/auth/SignUp";
-import SignUpContinued from "./src/screens/auth/SignUpContinued";
-
-const Stack = createStackNavigator();
+import Routes from "./src/Routes";
 
 const App = () => {
   const [fontsLoaded, fontError] = useFonts({
@@ -37,12 +31,7 @@ const App = () => {
 
   return (
     <NavigationContainer theme={theme}>
-      <Stack.Navigator screenOptions={{ headerShown: false }}>
-        <Stack.Screen name="Landing" component={Landing} />
-        <Stack.Screen name="SignUp" component={SignUp} />
-        <Stack.Screen name="SignUpContinued" component={SignUpContinued} />
-        <Stack.Screen name="SignIn" component={SignIn} />
-      </Stack.Navigator>
+      <Routes />
     </NavigationContainer>
   );
 };
