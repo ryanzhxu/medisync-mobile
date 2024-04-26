@@ -8,7 +8,6 @@ const styles = StyleSheet.create({
   content: {
     flex: 1,
     paddingHorizontal: "30px",
-    marginTop: "10%",
     padding: 30,
   },
   dateInput: {
@@ -47,6 +46,22 @@ const styles = StyleSheet.create({
   label: {
     color: colors.grey,
     marginBottom: 12,
+  },
+  row: {
+    flexDirection: "row",
+    alignItems: "center",
+    marginLeft: "auto",
+    marginRight: "auto",
+    marginBottom: 16,
+    marginTop: 8,
+  },
+  agreeText: {
+    color: colors.grey,
+    fontSize: 12,
+    marginLeft: 8,
+  },
+  link: {
+    textDecorationLine: "underline",
   },
 });
 

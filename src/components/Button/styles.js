@@ -15,12 +15,14 @@ const styles = StyleSheet.create({
   text: {
     color: colors.white,
     fontSize: 14,
+    fontFamily: "RobotoMedium",
   },
   lightBlueBg: {
     backgroundColor: colors.lightBlue,
   },
   lightBlueText: {
     color: colors.blue,
+    fontFamily: "RobotoMedium",
   },
 });
 

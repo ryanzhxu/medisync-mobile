@@ -14,8 +14,7 @@ const SignUp = ({ navigation }) => {
       </View>
       <View style={styles.content}>
         <Header children="Register a patient account" />
-        <Input placeholder="Enter your first name" label="First name" />
-        <Input placeholder="Enter your last name" label="Last name" />
+        <Input placeholder="Enter your full name" label="Full name" />
         <Input placeholder="Enter your email" label="Email Address" />
         <Input placeholder="Confirm your email" label="Confirm Email" />
         <Button

@@ -7,21 +7,28 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     alignItems: "center",
-    paddingTop: "60%",
+    paddingTop: "50%",
     height: height,
     justifyContent: "space-between",
   },
   logo: {
     width: "80%",
-    marginBottom: "7%",
+    marginBottom: "1%",
   },
   subText: {
-    width: "70%",
+    width: "80%",
     paddingTop: "40",
     color: colors.grey,
-    fontSize: 18,
+    fontSize: 22,
     fontFamily: "Roboto",
-    textAlign: "center",
+    textAlign: "left",
+  },
+  subTextBold: {
+    width: "80%",
+    paddingTop: "40",
+    color: colors.darkGreen,
+    fontFamily: "RobotoBold",
+    textAlign: "left",
   },
   upperContainer: {
     width: "100%",

@@ -12,9 +12,11 @@ const Landing = ({ navigation }) => {
           source={require("../../../assets/logo.png")}
           resizeMode="contain"
         />
+        <Text style={styles.subText}>Your journey to </Text>
         <Text style={styles.subText}>
-          Securely connecting patients and physicians
+          <Text style={styles.subTextBold}>better health</Text> starts
         </Text>
+        <Text style={styles.subText}>here</Text>
       </View>
 
       <View style={styles.buttonContainer}>

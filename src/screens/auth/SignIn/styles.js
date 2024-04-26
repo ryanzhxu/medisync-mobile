@@ -8,7 +8,6 @@ const styles = StyleSheet.create({
   content: {
     flex: 1,
     paddingHorizontal: "30px",
-    marginTop: "30%",
     padding: 30,
   },
   signInButton: {
