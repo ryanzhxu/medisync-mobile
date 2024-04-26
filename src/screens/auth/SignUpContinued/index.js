@@ -6,6 +6,7 @@ import {
   TextInput,
   Pressable,
   Text,
+  Alert,
 } from "react-native";
 import styles from "./styles";
 import AuthNavBar from "../../../components/AuthNavBar";
@@ -23,7 +24,7 @@ import { Linking } from "react-native";
 const SignUpContinued = ({ navigation }) => {
   const [date, setDate] = useState(new Date());
   const [showDatePicker, setShowDatePicker] = useState(false);
-  const [dateofBirth, setDateOfBirth] = useState("");
+  const [dateOfBirth, setDateOfBirth] = useState("");
 
   const [agreed, setAgreed] = useState(false);
   const [values, setValues] = useState({});
@@ -77,6 +78,26 @@ const SignUpContinued = ({ navigation }) => {
     setShowDatePicker(!showDatePicker);
   };
 
+  const onSubmit = () => {
+    if (!dateOfBirth) {
+      Alert.alert("Please enter your date of birth");
+      return;
+    }
+    if (!values.password || !values.confirmPassword) {
+      Alert.alert("Please complete both password fields");
+      return;
+    }
+    if (values.password !== values.confirmPassword) {
+      Alert.alert("Passwords do not match!");
+      return;
+    }
+    if (!agreed) {
+      Alert.alert("Please agree to the terms and conditions");
+      return;
+    }
+    console.log("Submit validation passed");
+  };
+
   return (
     <SafeAreaView style={styles.container}>
       <View>
@@ -121,18 +142,21 @@ const SignUpContinued = ({ navigation }) => {
         <Pressable onPress={toggleDatePicker}>
           <TextInput
             style={styles.dateInput}
-            value={dateofBirth}
+            value={dateOfBirth}
             placeholder="Select your birthdate"
             readOnly
             onPressIn={toggleDatePicker}
+            onChangeText={(val) => onChange(val, "dateOfBirth")}
           ></TextInput>
         </Pressable>
         <Input
+          onChangeText={(val) => onChange(val, "password")}
           placeholder="Enter a password"
           label="Password"
           secureTextEntry
         />
         <Input
+          onChangeText={(val) => onChange(val, "confirmPassword")}
           placeholder="Enter the password again"
           label="Confirm Password"
           secureTextEntry
@@ -156,7 +180,9 @@ const SignUpContinued = ({ navigation }) => {
             </Text>
           </Text>
         </View>
-        <Button style={styles.signUpButton}>Sign Up</Button>
+        <Button style={styles.signUpButton} onPress={onSubmit}>
+          Sign Up
+        </Button>
       </View>
     </SafeAreaView>
   );
