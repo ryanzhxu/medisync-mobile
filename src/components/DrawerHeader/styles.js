@@ -7,6 +7,7 @@ const styles = StyleSheet.create({
     justifyContent: "space-between",
     alignItems: "center",
     paddingHorizontal: 16,
+    marginBottom: -20,
   },
   logo: {
     width: 120,

@@ -13,6 +13,7 @@ const colors = {
   medGreen: "#015963",
   darkNavy: "#5C5F6E",
   darkGrey: "#B4B4B4",
+  charcoalGrey: "#5F5F5F",
 };
 
 export default colors;

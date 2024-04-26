@@ -20,11 +20,12 @@ import {
   TERMS_CONDITIONS_LINK,
 } from "../../../constants/links";
 import { Linking } from "react-native";
+import DateInput from "../../../components/DateInput";
 
 const SignUpContinued = ({ navigation }) => {
-  const [date, setDate] = useState(new Date());
-  const [showDatePicker, setShowDatePicker] = useState(false);
-  const [dateOfBirth, setDateOfBirth] = useState("");
+  // const [date, setDate] = useState(new Date());
+  // const [showDatePicker, setShowDatePicker] = useState(false);
+  const [dateOfBirth, setDateOfBirth] = useState(new Date());
 
   const [agreed, setAgreed] = useState(false);
   const [values, setValues] = useState({});
@@ -44,39 +45,39 @@ const SignUpContinued = ({ navigation }) => {
     }));
   };
 
-  const onDateChange = ({ type }, selectedDate) => {
-    if (type == "set") {
-      const currentDate = selectedDate;
-      setDate(currentDate);
-      if (Platform.OS === "android") {
-        toggleDatePicker();
-        setDateOfBirth(formatDate(currentDate));
-      }
-    } else {
-      toggleDatePicker();
-    }
-  };
+  // const onDateChange = ({ type }, selectedDate) => {
+  //   if (type == "set") {
+  //     const currentDate = selectedDate;
+  //     setDate(currentDate);
+  //     if (Platform.OS === "android") {
+  //       toggleDatePicker();
+  //       setDateOfBirth(formatDate(currentDate));
+  //     }
+  //   } else {
+  //     toggleDatePicker();
+  //   }
+  // };
 
-  const confirmIOSDate = () => {
-    setDateOfBirth(formatDate(currentDate));
-    toggleDatePicker();
-  };
+  // const confirmIOSDate = () => {
+  //   setDateOfBirth(formatDate(currentDate));
+  //   toggleDatePicker();
+  // };
 
-  const formatDate = (date) => {
-    let formattedDate = new Date(date);
-    let month = formattedDate.getMonth() + 1;
-    let day = formattedDate.getDate();
-    let year = formattedDate.getFullYear();
+  // const formatDate = (date) => {
+  //   let formattedDate = new Date(date);
+  //   let month = formattedDate.getMonth() + 1;
+  //   let day = formattedDate.getDate();
+  //   let year = formattedDate.getFullYear();
 
-    let formattedMonth = month < 10 ? `0${month}` : month;
-    let formattedDay = day < 10 ? `0${day}` : day;
+  //   let formattedMonth = month < 10 ? `0${month}` : month;
+  //   let formattedDay = day < 10 ? `0${day}` : day;
 
-    return `${formattedMonth}/${formattedDay}/${year}`;
-  };
+  //   return `${formattedMonth}/${formattedDay}/${year}`;
+  // };
 
-  const toggleDatePicker = () => {
-    setShowDatePicker(!showDatePicker);
-  };
+  // const toggleDatePicker = () => {
+  //   setShowDatePicker(!showDatePicker);
+  // };
 
   const onSubmit = () => {
     if (!dateOfBirth) {
@@ -105,7 +106,8 @@ const SignUpContinued = ({ navigation }) => {
       </View>
       <View style={styles.content}>
         <Header children="Register a patient account" />
-        {showDatePicker && (
+        <DateInput value={dateOfBirth} onChange={setDateOfBirth} />
+        {/* {showDatePicker && (
           <DateTimePicker
             mode="date"
             display="spinner"
@@ -148,7 +150,7 @@ const SignUpContinued = ({ navigation }) => {
             onPressIn={toggleDatePicker}
             onChangeText={(val) => onChange(val, "dateOfBirth")}
           ></TextInput>
-        </Pressable>
+        </Pressable> */}
         <Input
           onChangeText={(val) => onChange(val, "password")}
           placeholder="Enter a password"

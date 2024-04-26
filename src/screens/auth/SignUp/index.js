@@ -17,18 +17,18 @@ const SignUp = ({ navigation }) => {
   };
 
   const onSubmit = () => {
-    if (!values.fullName) {
-      Alert.alert("Please enter your full name");
-      return;
-    }
-    if (!values.email || !values.confirmEmail) {
-      Alert.alert("Please complete both email fields");
-      return;
-    }
-    if (values.email !== values.confirmEmail) {
-      Alert.alert("Emails do not match!");
-      return;
-    }
+    // if (!values.fullName) {
+    //   Alert.alert("Please enter your full name");
+    //   return;
+    // }
+    // if (!values.email || !values.confirmEmail) {
+    //   Alert.alert("Please complete both email fields");
+    //   return;
+    // }
+    // if (values.email !== values.confirmEmail) {
+    //   Alert.alert("Emails do not match!");
+    //   return;
+    // }
     navigation.navigate("SignUpContinued");
   };
   return (

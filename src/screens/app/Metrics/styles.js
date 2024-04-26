@@ -5,8 +5,13 @@ const styles = StyleSheet.create({
     flex: 1,
   },
   content: {
-    flex: 1,
     paddingHorizontal: 30,
+  },
+  graphTitle: {
+    color: "#5F636C",
+    fontSize: 18,
+    fontFamily: "RobotoMedium",
+    textAlign: "center",
   },
 });
 
