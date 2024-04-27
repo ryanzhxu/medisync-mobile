@@ -31,24 +31,6 @@ const Metrics = ({ navigation }) => {
         />
         <View style={{ height: 20 }} />
         <Text style={styles.graphTitle}>Blood Glucose</Text>
-        {/* <LineChart
-          data={data}
-          areaChart
-          isAnimated
-          color="#07BAD1"
-          yAxisTextStyle={{ color: "lightgray" }}
-          xAxisTextStyle={{ color: "lightgray" }}
-          startFillColor={"rgb(84,219,234)"}
-          endFillColor={"rgb(84,219,234)"}
-          startOpacity={0.4}
-          endOpacity={0.1}
-          rulesColor="lightgray"
-          rulesType="solid"
-          initialSpacing={10}
-          yAxisColor="lightgray"
-          xAxisColor="lightgray"
-          hideRules
-        /> */}
         <LineChart
           isAnimated
           areaChart

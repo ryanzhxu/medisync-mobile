@@ -113,23 +113,23 @@ const Routes = () => {
     </Tab.Navigator>
   );
 
-  //   return (
-  //     <Drawer.Navigator
-  //       screenOptions={{ headerShown: false }}
-  //       drawerContent={(props) => <DrawerContent {...props} />}
-  //     >
-  //       <Drawer.Screen name=" " component={Tabs} />
-  //     </Drawer.Navigator>
-  //   );
-
   return (
-    <Stack.Navigator screenOptions={{ headerShown: false }}>
-      <Stack.Screen name="Landing" component={Landing} />
-      <Stack.Screen name="SignUp" component={SignUp} />
-      <Stack.Screen name="SignUpContinued" component={SignUpContinued} />
-      <Stack.Screen name="SignIn" component={SignIn} />
-    </Stack.Navigator>
+    <Drawer.Navigator
+      screenOptions={{ headerShown: false }}
+      drawerContent={(props) => <DrawerContent {...props} />}
+    >
+      <Drawer.Screen name=" " component={Tabs} />
+    </Drawer.Navigator>
   );
+
+  //   return (
+  //     <Stack.Navigator screenOptions={{ headerShown: false }}>
+  //       <Stack.Screen name="Landing" component={Landing} />
+  //       <Stack.Screen name="SignUp" component={SignUp} />
+  //       <Stack.Screen name="SignUpContinued" component={SignUpContinued} />
+  //       <Stack.Screen name="SignIn" component={SignIn} />
+  //     </Stack.Navigator>
+  //   );
 };
 
 const styles = StyleSheet.create({
