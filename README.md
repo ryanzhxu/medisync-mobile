@@ -21,7 +21,7 @@ npm run ios
 To view with your own mobile device, you must have the **Expo Go** app installed from either the iOS or Google Play Store. Then run: 
 ```sh
 npm install
-expo-cli start --tunnel
+npx expo start --tunnel
 ```
 Scan the QR code that prints out on the terminal to view it on your phone. 
 
